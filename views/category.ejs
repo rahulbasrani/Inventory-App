@@ -1,0 +1,23 @@
+<%- include('index') %>
+<main>
+  <div>
+    <a href="/catalog/category/create"><button>ADD Dance Form</button></a>
+    <h1>List of all Dance Forms in our server</h1>
+    <ul>
+      <% for(let i=0;i < category_list.length;i++){ %>
+      <li>
+        <div class="boxs">
+          <div>
+            <a href="<%= category_list[i].url %>"
+              ><h2><%=category_list[i].name %></h2></a
+            >
+          </div>
+          <div><%=category_list[i].description %></div>
+        </div>
+      </li>
+      <br />
+
+      <% } %>
+    </ul>
+  </div>
+</main>
